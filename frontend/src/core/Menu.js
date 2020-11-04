@@ -12,10 +12,14 @@ const Menu = ({ history }) => {
   return (
     <header className="header">
       <nav className="navbar">
-        <h1 className="logo">Logo</h1>
-        <ul className={navbar ? "nav-links nav-active" : "nav-links"}>
+        <h1 className="navbar__logo">T-Shirts</h1>
+        <ul
+          className={navbar ? "navbar__links navbar--active" : "navbar__links"}
+        >
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={navbarClicked}>
+              Home
+            </Link>
           </li>
           {isAutheticated() && isAutheticated().user.role === 0 && (
             <li>
@@ -60,9 +64,7 @@ const Menu = ({ history }) => {
           className={navbar ? "hamburger-menu bar-change" : "hamburger-menu"}
           onClick={navbarClicked}
         >
-          <div className="bar1"></div>
-          <div className="bar2"></div>
-          <div className="bar3"></div>
+          <div className="bar1">Menu</div>
         </div>
       </nav>
     </header>
