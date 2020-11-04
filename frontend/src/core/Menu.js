@@ -17,19 +17,44 @@ const Menu = ({ history }) => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            {isAutheticated() && isAutheticated().user.role === 0 && (
+          {isAutheticated() && isAutheticated().user.role === 0 && (
+            <li>
               <Link to="/">Dashboard</Link>
-            )}
-          </li>
-          <li>
-            {isAutheticated() && isAutheticated().user.role === 0 && (
+            </li>
+          )}
+          {isAutheticated() && isAutheticated().user.role === 1 && (
+            <li>
               <Link to="/">Dashboard</Link>
-            )}
-          </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
+            </li>
+          )}
+          {!isAutheticated() && (
+            <li>
+              {" "}
+              <Link to="/signup">Signup</Link>
+            </li>
+          )}
+          {!isAutheticated() && (
+            <li>
+              {" "}
+              <Link to="/signin">Signin</Link>
+            </li>
+          )}
+          {isAutheticated() && (
+            <li>
+              (
+              <Link
+                to="/"
+                onClick={() => {
+                  signout(() => {
+                    history.push("/");
+                  });
+                }}
+              >
+                Signout
+              </Link>
+              )
+            </li>
+          )}
         </ul>
         <div
           className={navbar ? "hamburger-menu bar-change" : "hamburger-menu"}

@@ -13,9 +13,10 @@ body {
 
 .header {
   min-height: 100vh;
-  background: radial-gradient(rgb(80, 133, 247), rgb(5, 46, 136));
+  
 
   .navbar {
+    background: radial-gradient(rgb(80, 133, 247), rgb(5, 46, 136));
     padding: 0 2rem;
     display: flex;
     align-items: center;
