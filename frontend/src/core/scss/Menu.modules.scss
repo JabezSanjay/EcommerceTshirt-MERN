@@ -1,22 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  min-height: 100vh;
-  background: radial-gradient(rgb(80, 133, 247), rgb(5, 46, 136));
-}
+@import "./variables";
+@import "./main";
 
 .header {
   
   .navbar {
-    
     padding: 0 2rem;
     display: flex;
     align-items: center;
@@ -26,10 +13,10 @@ body {
     width: 100%;
 
     &__logo {
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #fff;
+      letter-spacing: 5px;
+      color: $whiteColor;
     }
 
     &__links {
@@ -41,7 +28,7 @@ body {
 
         a {
           text-decoration: none;
-          color: #fff;
+          color: $whiteColor;
           font-size: 1.05rem;
           margin: 0 1.2rem;
           position: relative;
@@ -54,7 +41,7 @@ body {
           left: 0;
           height: 2px;
           width: 0%;
-          background-color: #fff;
+          background-color: $whiteColor;
           display: block;
         }
 
@@ -75,7 +62,7 @@ body {
     display: none;
 
     div {
-      color: #fff;
+      color: $whiteColor;
       font-size: 1.05rem;
       margin: 0 1.2rem;
       margin: 6px;
@@ -95,7 +82,7 @@ body {
       left: 0;
       height: 100vh;
       width: 200px;
-      background: rgb(1, 37, 116);
+      background: $secondaryBackgroundColor;
       margin: 0;
       padding: 0;
       flex-direction: column;
