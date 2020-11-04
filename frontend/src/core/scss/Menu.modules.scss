@@ -8,12 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 10vh;
+    min-height: 7.5vh;
     position: fixed;
     width: 100%;
+    background: linear-gradient($primaryBackgroundColor, $secondaryBackgroundColor,2);
 
     &__logo {
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 5px;
       color: $whiteColor;
@@ -74,7 +75,7 @@
 
 
 
-@media (max-width: 725px) {
+@media (max-width: 1024px) {
   .navbar {
     &__links {
       position: absolute;
@@ -91,6 +92,7 @@
       transform: translateX(-100%);
       z-index: 10;
     }
+    
     .hamburger-menu {
       display: block;
     }

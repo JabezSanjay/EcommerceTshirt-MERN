@@ -1,9 +1,10 @@
+@import "./variables";
 .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:radial-gradient(rgb(80, 133, 247), rgb(1, 37, 116));
+    background: linear-gradient($primaryBackgroundColor, $secondaryBackgroundColor,0.2);
     color: white;
     text-align: center;      
   }

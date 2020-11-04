@@ -1,0 +1,40 @@
+@import "./variables";
+
+.homescreen{
+    min-height: 100vh;
+    display: flex;
+    background: radial-gradient($primaryBackgroundColor, $secondaryBackgroundColor);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    &__text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        h1{
+            font-size: 2.5rem;
+            color:$whiteColor; 
+            letter-spacing: 2px;
+        }
+    }
+    img{
+      width:90vh;
+  }
+}
+
+@media (max-width: 1024px) {
+    .homescreen{
+        flex-direction: column;
+        justify-content: space-around;
+        img{
+            width: 45vh;
+        }
+        &__text{
+            h1{
+                font-size: 1.75rem;
+                margin: 125px 50px ;
+            }
+        }
+    }
+  }
+  

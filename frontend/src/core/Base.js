@@ -3,7 +3,7 @@ import "./scss/Base.modules.scss";
 
 const Base = () => {
   return (
-    <div class="footer">
+    <div className="footer">
       <p>Footer</p>
     </div>
   );
