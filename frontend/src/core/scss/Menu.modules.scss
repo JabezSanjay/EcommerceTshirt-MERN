@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  min-height: 100vh;
+  background: radial-gradient(rgb(80, 133, 247), rgb(5, 46, 136));
+
+  .navbar {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    position: fixed;
+    width: 100%;
+
+    .logo {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      transition: 0.3s ease all;
+
+      li {
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 1.05rem;
+          margin: 0 1.2rem;
+          position: relative;
+        }
+
+        a::after {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          left: 0;
+          height: 2px;
+          width: 0%;
+          background-color: #fff;
+          display: block;
+        }
+
+        a:hover::after {
+          width: 100%;
+          transition: 0.3s ease all;
+        }
+      }
+    }
+
+    .nav-links.nav-active {
+      transform: translateX(0%);
+    }
+  }
+
+  .hamburger-menu {
+    cursor: pointer;
+    display: none;
+
+    div {
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      margin: 6px;
+      border-radius: 10px;
+      transition: 0.3s ease all;
+    }
+  }
+
+  .showcase {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+
+    h1 {
+      font-size: 2.4rem;
+      word-spacing: 3px;
+      color: #eee;
+    }
+
+    button {
+      margin-top: 3rem;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      border: 2px solid #eee;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-family: inherit;
+      color: #fff;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
+        color: rgb(5, 46, 136);
+        transition: 0.3s ease all;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 725px) {
+  .navbar {
+    .nav-links {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 225px;
+      background: rgb(1, 37, 116);
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      transform: translateX(-100%);
+      z-index: 10;
+    }
+
+    .hamburger-menu {
+      display: block;
+    }
+
+    .bar-change .bar1 {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .bar-change .bar2 {
+      opacity: 0;
+    }
+
+    .bar-change .bar3 {
+      transform: rotate(45deg) translate(-9px, -5px);
+    }
+  }
+
+}
