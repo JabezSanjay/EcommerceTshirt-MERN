@@ -10,9 +10,11 @@ const Home = () => {
       <div className="homescreen">
         <div className="homescreen__text">
           <h1>Your Striking Online Store</h1>
+          <p>This is a project website created using MERN stack</p>
         </div>
         <img src={illustration} alt="" />
       </div>
+      <div className="productpage"></div>
     </div>
   );
 };

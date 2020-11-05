@@ -1,4 +1,4 @@
-@import "./variables";
+@import "../../scss/variables";
 
 .homescreen{
     min-height: 100vh;
@@ -16,10 +16,19 @@
             color:$whiteColor; 
             letter-spacing: 2px;
         }
+        p{
+            color: $whiteColor;
+        }
     }
     img{
       width:90vh;
   }
+}
+
+.productpage{
+    min-height: 100vh;
+    background-image: url("../../images/background.svg");
+    
 }
 
 @media (max-width: 1024px) {
@@ -31,8 +40,8 @@
         }
         &__text{
             h1{
-                font-size: 1.75rem;
-                margin: 125px 50px ;
+                font-size: 2rem;
+                margin-top: 150px;
             }
         }
     }

@@ -1,0 +1,6 @@
+@import "../../scss/variables";
+
+.signin{
+    min-height: 100vh; 
+    background: radial-gradient($primaryBackgroundColor, $secondaryBackgroundColor);
+}

@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./main";
+@import "../../scss/variables";
+@import "../../scss/main";
 
 .header {
   
@@ -11,7 +11,7 @@
     min-height: 7.5vh;
     position: fixed;
     width: 100%;
-    background: linear-gradient($primaryBackgroundColor, $secondaryBackgroundColor,2);
+    background: ($secondaryBackgroundColor);
 
     &__logo {
       font-size: 1rem;
@@ -55,6 +55,7 @@
 
     &--active {
       transform: translateX(0%);
+      
     }
   }
 
