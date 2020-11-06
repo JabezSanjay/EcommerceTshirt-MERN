@@ -93,7 +93,7 @@ const Signin = () => {
               </div>
 
               <div className="form__field">
-                <input type="submit" value="Sign Up" onClick={onSubmit} />
+                <input type="submit" value="Sign In" onClick={onSubmit} />
               </div>
             </form>
 

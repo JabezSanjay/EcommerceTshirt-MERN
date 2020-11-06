@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Menu from "../core/Menu";
 import SignupImage from "../images/signup.svg";
 import { signup } from "../auth/helper";
+import { Link } from "react-router-dom";
 import "./scss/Sign.modules.scss";
 import "./scss/Message.modules.scss";
 import { ToastContainer, toast } from "react-toastify";
@@ -105,7 +106,7 @@ const Signup = () => {
               </form>
 
               <p>
-                Already have an accout? <a href="/">Log in</a>
+                Already have an accout? <Link to="/signin">Sign in</Link>
               </p>
             </div>
           </div>
