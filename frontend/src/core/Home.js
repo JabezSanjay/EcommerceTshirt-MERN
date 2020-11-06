@@ -1,5 +1,6 @@
 import React from "react";
 import Menu from "./Menu";
+import Card from "./Card";
 import "./scss/Home.modules.scss";
 import illustration from "../images/main-page-illustration.png";
 
@@ -14,7 +15,9 @@ const Home = () => {
         </div>
         <img src={illustration} alt="" />
       </div>
-      <div className="productpage"></div>
+      <div className="productpage">
+        <Card />
+      </div>
     </div>
   );
 };

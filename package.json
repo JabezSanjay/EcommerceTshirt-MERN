@@ -6,10 +6,10 @@
   "scripts": {
     "client-install": "npm install --prefix frontend",
     "start": "node app.js",
-    "server" : "nodemon app.js",
-    "client" : "npm start --prefix client",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run app\" \"npm run frontend\"",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +30,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.19.4",
     "npm": "^6.13.0",
+    "react-toastify": "^6.0.9",
     "stripe": "^8.114.0",
     "uuid": "^3.3.3"
   }

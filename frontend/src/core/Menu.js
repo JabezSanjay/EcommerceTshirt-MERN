@@ -23,12 +23,12 @@ const Menu = ({ history }) => {
           </li>
           {isAutheticated() && isAutheticated().user.role === 0 && (
             <li>
-              <Link to="/">Dashboard</Link>
+              <Link to="/user/dashboard">Dashboard</Link>
             </li>
           )}
           {isAutheticated() && isAutheticated().user.role === 1 && (
             <li>
-              <Link to="/">Dashboard</Link>
+              <Link to="/admin/dashboard">Dashboard</Link>
             </li>
           )}
           {!isAutheticated() && (
