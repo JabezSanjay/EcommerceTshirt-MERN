@@ -45,7 +45,7 @@ export const signout = (next) => {
     return fetch(`${API}/signout`, {
       method: "GET",
     })
-      .then((response) => console.log("signout success"))
+      .then((response) => console.log())
       .catch((err) => console.log(err));
   }
 };
