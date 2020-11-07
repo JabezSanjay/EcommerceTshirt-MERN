@@ -12,6 +12,7 @@
     position: fixed;
     width: 100%;
     background: $secondaryBackgroundColor;
+    z-index: 999;
 
     &__logo {
       font-size: 1rem;
