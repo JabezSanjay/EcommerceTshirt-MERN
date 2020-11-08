@@ -2,7 +2,6 @@
 @import "../../scss/main";
 
 .header {
-  
   .navbar {
     padding: 0 2rem;
     display: flex;
@@ -13,18 +12,15 @@
     width: 100%;
     background: $secondaryBackgroundColor;
     z-index: 999;
-
     &__logo {
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 5px;
       color: $whiteColor;
     }
-
     &__links {
       display: flex;
       transition: 0.3s ease all;
-
       li {
         list-style-type: none;
 
@@ -56,7 +52,6 @@
 
     &--active {
       transform: translateX(0%);
-      
     }
   }
 
@@ -73,9 +68,7 @@
       transition: 0.7s ease-in-out all;
     }
   }
-  }
-
-
+}
 
 @media (max-width: 1024px) {
   .navbar {
@@ -94,7 +87,7 @@
       transform: translateX(-100%);
       z-index: 10;
     }
-    
+
     .hamburger-menu {
       display: block;
     }
@@ -102,5 +95,4 @@
       transform: rotate(-360deg);
     }
   }
-
 }
