@@ -22,13 +22,18 @@
     }
     img{
       width:90vh;
-  }
+    }
 }
 
 .productpage{
     min-height: 100vh;
     background-image: url("../../images/background.svg");
-    
+    span{
+        color: #fff;
+        background-color: $secondaryBackgroundColor;
+        padding: 10px;
+        border-radius: 999px;
+    }
 }
 
 @media (max-width: 1024px) {

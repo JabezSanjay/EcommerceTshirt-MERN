@@ -3,6 +3,7 @@ import Menu from "./Menu";
 import Card from "./Card";
 import "./scss/Home.modules.scss";
 import illustration from "../images/main-page-illustration.png";
+import ScrollToTop from "react-scroll-up";
 
 const Home = () => {
   return (
@@ -17,6 +18,11 @@ const Home = () => {
       </div>
       <div className="productpage">
         <Card />
+        <ScrollToTop showUnder={100}>
+          <span>
+            <i className="fa fa-chevron-up" aria-hidden="true"></i>
+          </span>
+        </ScrollToTop>
       </div>
     </div>
   );

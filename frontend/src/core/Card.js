@@ -5,68 +5,66 @@ import cardImage from "../images/Blue-Sleeve.JPG";
 const Card = () => {
   return (
     <div>
-      <div className="row" id="ads">
-        <div className="col-md-4">
-          <div className="card rounded">
-            <div className="card-image">
-              <img className="img-fluid" src={cardImage} alt="" />
-            </div>
-            <div className="card-image-overlay m-auto">
-              <span className="card-detail-badge">Used</span>
-              <span className="card-detail-badge">$28,000.00</span>
-              <span className="card-detail-badge">13000 Kms</span>
-            </div>
-            <div className="card-body text-center">
-              <div className="ad-title m-auto">
-                <h5>Honda Accord LX</h5>
+      <section id="gallery">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 mb-4">
+              <div className="card">
+                <img src={cardImage} alt="" className="card-img-top" />
+                <div className="card-body">
+                  <h5 className="card-title">Sunset</h5>
+                  <p className="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                    eum similique repellat a laborum.
+                  </p>
+                  <a href="/" className="btn btn-outline-success btn-sm">
+                    Read More
+                  </a>
+                  <a href="/" className="btn btn-outline-danger btn-sm">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                </div>
               </div>
-              <a className="ad-btn" href="/">
-                View
-              </a>
+            </div>
+            <div className="col-lg-4 mb-4">
+              <div className="card">
+                <img src={cardImage} alt="" className="card-img-top" />
+                <div className="card-body">
+                  <h5 className="card-title">Sunset</h5>
+                  <p className="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                    eum similique repellat a laborum.
+                  </p>
+                  <a href="/" className="btn btn-outline-success btn-sm">
+                    Read More
+                  </a>
+                  <a href="/" className="btn btn-outline-danger btn-sm">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 mb-4">
+              <div className="card">
+                <img src={cardImage} alt="" className="card-img-top" />
+                <div className="card-body">
+                  <h5 className="card-title">Sunset</h5>
+                  <p className="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
+                    eum similique repellat a laborum.
+                  </p>
+                  <a href="/" className="btn btn-outline-success btn-sm">
+                    Read More
+                  </a>
+                  <a href="/" className="btn btn-outline-danger btn-sm">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="col-md-4">
-          <div className="card rounded">
-            <div className="card-image">
-              <img className="img-fluid" src={cardImage} alt="" />
-            </div>
-            <div className="card-image-overlay m-auto">
-              <span className="card-detail-badge">Used</span>
-              <span className="card-detail-badge">$28,000.00</span>
-              <span className="card-detail-badge">13000 Kms</span>
-            </div>
-            <div className="card-body text-center">
-              <div className="ad-title m-auto">
-                <h5>Honda Accord LX</h5>
-              </div>
-              <a className="ad-btn" href="/">
-                View
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card rounded">
-            <div className="card-image">
-              <img className="img-fluid" src={cardImage} alt="" />
-            </div>
-            <div className="card-image-overlay m-auto">
-              <span className="card-detail-badge">Used</span>
-              <span className="card-detail-badge">$28,000.00</span>
-              <span className="card-detail-badge">13000 Kms</span>
-            </div>
-            <div className="card-body text-center">
-              <div className="ad-title m-auto">
-                <h5>Honda Accord LX</h5>
-              </div>
-              <a className="ad-btn" href="/">
-                View
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
