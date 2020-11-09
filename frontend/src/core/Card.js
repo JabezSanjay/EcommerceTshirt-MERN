@@ -1,30 +1,64 @@
 import React from "react";
 import "./scss/Card.modules.scss";
-import cardImage from "../images/Blue-Sleeve.JPG";
+import ImageHelper from "./helper/ImageHelper";
+import { addItemtoCart, removeItemsFromCart } from "./helper/cartHelper";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const Card = () => {
+const Card = ({
+  product,
+  addtoCart = false,
+  removeFromCart = false,
+  setReload = (f) => f,
+  reload = undefined,
+}) => {
+  const addToCart = () => {
+    addItemtoCart(product);
+    toast.success(`${product.name} has been added to the cart`);
+  };
+
+  const showAddToCart = () => {
+    return (
+      addtoCart && (
+        // eslint-disable-next-line
+        <a onClick={addToCart} className="btn btn-outline-success btn-sm">
+          Add to Cart
+        </a>
+      )
+    );
+  };
+
+  const showRemoveFromCart = () => {
+    return (
+      removeFromCart && (
+        // eslint-disable-next-line
+        <a
+          className="btn btn-outline-danger btn-sm"
+          onClick={() => {
+            removeItemsFromCart(product._id);
+            setReload(!reload);
+          }}
+        >
+          Remove from Cart
+        </a>
+      )
+    );
+  };
+
+  const cartName = product.name;
+  const cartDescription = product.description;
+  const cartPrice = product.price;
   return (
-    <div>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-3 mb-4">
-            <div className="card">
-              <img src={cardImage} alt="" className="card-img-top" />
-              <div className="card-body">
-                <h5 className="card-title">Sunset</h5>
-                <p className="card-text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut
-                  eum similique repellat a laborum.
-                </p>
-                <a href="/" className="btn btn-outline-success btn-sm">
-                  Read More
-                </a>
-                <a href="/" className="btn btn-outline-danger btn-sm">
-                  <i className="fa fa-heart"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+    <div className="col-lg-4 mb-4">
+      <ToastContainer />
+      <div className="card">
+        <ImageHelper product={product} className="card-img-top" />
+        <div className="card-body text-center">
+          <h5 className="card-title">{cartName}</h5>
+          <p className="card-text">{cartDescription}</p>
+          <p className="card-text">Rs.{cartPrice}</p>
+          {showRemoveFromCart(removeFromCart)}
+          {showAddToCart(addtoCart)}
         </div>
       </div>
     </div>

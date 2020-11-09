@@ -1,4 +1,4 @@
-export const addItemtoCart = (item, next) => {
+export const addItemtoCart = (item) => {
   let cart = [];
   if (typeof window !== undefined) {
     if (localStorage.getItem("cart")) {
@@ -8,7 +8,6 @@ export const addItemtoCart = (item, next) => {
       ...item,
     });
     localStorage.setItem("cart", JSON.stringify(cart));
-    next();
   }
 };
 

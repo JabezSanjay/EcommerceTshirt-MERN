@@ -28,6 +28,14 @@
 .productpage{
     min-height: 100vh;
     background-image: url("../../images/background.svg");
+    h1{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $secondaryBackgroundColor;
+        margin: 4.5rem;
+    }
     span{
         color: #fff;
         background-color: $secondaryBackgroundColor;

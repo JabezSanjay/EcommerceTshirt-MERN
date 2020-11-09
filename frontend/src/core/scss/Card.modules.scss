@@ -1,0 +1,11 @@
+@import "../../scss/variables";
+.card{
+    border: 2px solid $primaryBackgroundColor;
+    .card-title{
+        font-weight: 800;
+        color: $secondaryBackgroundColor;
+    }
+    .card-text{
+        font-weight: 500;
+    }
+}
