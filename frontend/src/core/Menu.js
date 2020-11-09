@@ -48,7 +48,6 @@ const Menu = ({ history }) => {
             )}
             {isAutheticated() && (
               <li>
-                (
                 <Link
                   to="/"
                   onClick={() => {
@@ -60,7 +59,6 @@ const Menu = ({ history }) => {
                 >
                   Signout
                 </Link>
-                )
               </li>
             )}
           </ul>

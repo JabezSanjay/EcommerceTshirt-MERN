@@ -74,10 +74,10 @@
   .navbar {
     &__links {
       position: absolute;
-      top: 0;
+      top: 50px;
       left: 0;
-      height: 100vh;
-      width: 200px;
+      height: 50vh;
+      width: 100%;
       background: $secondaryBackgroundColor;
       margin: 0;
       padding: 0;
