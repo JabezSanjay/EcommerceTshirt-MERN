@@ -20,7 +20,10 @@ const Home = () => {
         <Card />
         <ScrollToTop showUnder={100}>
           <span>
-            <i className="fa fa-chevron-up" aria-hidden="true"></i>
+            <i className="fa fa-arrow-up" aria-hidden="true">
+              {" "}
+              Back To Top
+            </i>
           </span>
         </ScrollToTop>
       </div>
