@@ -57,10 +57,14 @@ const Cart = () => {
           <div className="cartpage__products">{loadProducts()}</div>
         </div>
       </div>
-      <div className="checkout text-center">
-        <StripeCheckout products={products} setReload={setReload} />
-        <img src={paymentIllustration} alt="" />
-      </div>
+      {window.localStorage.cart.length !== 2 ? (
+        <div className="checkout text-center">
+          <StripeCheckout products={products} setReload={setReload} />
+          <img src={paymentIllustration} alt="" />
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 };
