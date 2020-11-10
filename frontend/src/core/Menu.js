@@ -46,6 +46,11 @@ const Menu = ({ history }) => {
                 <Link to="/signin">Signin</Link>
               </li>
             )}
+            <li>
+              <Link to="/cart" onClick={navbarClicked}>
+                Cart
+              </Link>
+            </li>
             {isAutheticated() && (
               <li>
                 <Link
@@ -53,7 +58,10 @@ const Menu = ({ history }) => {
                   onClick={() => {
                     signout(() => {
                       history.push("/");
-                      toast.success("Signout Successful");
+                      toast.success("Signout Successful", {
+                        position: "bottom-right",
+                        autoClose: 2000,
+                      });
                     });
                   }}
                 >
@@ -61,11 +69,6 @@ const Menu = ({ history }) => {
                 </Link>
               </li>
             )}
-            <li>
-              <Link to="/cart" onClick={navbarClicked}>
-                Cart
-              </Link>
-            </li>
           </ul>
           <div
             className={navbar ? "hamburger-menu bar-change" : "hamburger-menu"}
@@ -79,7 +82,7 @@ const Menu = ({ history }) => {
   };
   return (
     <div>
-      <ToastContainer />
+      <ToastContainer position="bottom-right" autoClose={2000} />
       {navbarComponent()}
     </div>
   );

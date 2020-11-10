@@ -17,6 +17,7 @@ const Card = ({
     addItemtoCart(product);
     toast.success(`${product.name} has been added to the cart`, {
       autoClose: 2000,
+      position: "bottom-right",
     });
   };
 
@@ -59,7 +60,7 @@ const Card = ({
   const cartPrice = product.price;
   return (
     <div className="col-lg-4 mb-4">
-      <ToastContainer autoClose={2000} />
+      <ToastContainer autoClose={2000} position="bottom-right" />
       <div className="card">
         {showImageInCard(showImage)}
         <div className="card-body text-center">

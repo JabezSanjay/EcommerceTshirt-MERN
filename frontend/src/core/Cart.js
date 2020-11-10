@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
 import Card from "./Card";
+import { Link } from "react-router-dom";
 import StripeCheckout from "./StripeCheckout";
 import { loadCartItems } from "./helper/cartHelper";
 import "./scss/Cart.modules.scss";
@@ -37,14 +38,27 @@ const Cart = () => {
         </div>
       );
     } else {
-      return <h3>No Items in Cart</h3>;
+      return (
+        <div className="m-5">
+          <h3 className="text-white ">No Items in Cart</h3>
+          <Link to="/" className="btn btn-success btn-sm">
+            Back To Shopping
+          </Link>
+        </div>
+      );
     }
   };
 
   return (
     <div>
       <Menu />
-      <div className="cartpage">
+      <div
+        className={
+          window.localStorage.cart.length !== 2
+            ? "cartpage"
+            : "cartpage-alternative"
+        }
+      >
         <img
           src={
             window.localStorage.cart.length !== 2
