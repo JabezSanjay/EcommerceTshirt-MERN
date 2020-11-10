@@ -56,12 +56,12 @@ const Signin = () => {
   };
 
   const loadingMessage = () => {
-    return loading && toast.info("Loading...");
+    return loading && toast.info("Loading...", { autoClose: 2000 });
   };
 
   const errorMessage = () => {
     if (error) {
-      toast.error(error);
+      toast.error(error, { autoClose: 2000 });
     }
   };
 
@@ -109,7 +109,7 @@ const Signin = () => {
   return (
     <div>
       <Menu />
-      <ToastContainer />
+      <ToastContainer autoClose={2000} />
       {loadingMessage()}
       {errorMessage()}
       {signInForm()}

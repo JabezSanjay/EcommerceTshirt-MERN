@@ -1,0 +1,64 @@
+@import "../../scss/variables";
+
+.cartpage{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    &__products{
+        flex-direction: row;
+        width: 100%;
+        margin-left: 20rem;
+        margin-top: 7rem;
+    }
+    img{
+        width: 50vh;
+        margin-right: 20rem;
+        margin-top: 7rem;
+    }
+    
+}
+
+.checkout{
+    
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    h2{
+        font-size: 30px;
+        color: $secondaryBackgroundColor;
+        float: right;
+    }
+    img{
+       
+        width: 50vh;
+        float: left;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .cartpage{
+        flex-direction: column;
+        &__products{
+            margin-left: 0;
+        }
+        img{
+            width: 30vh;
+            margin-right: 0;
+            margin-top: 1rem;
+        }
+    }
+    .checkout{
+        margin-top:50px;
+        margin-top: 3rem;
+        display: flex;
+        align-items:center;
+        justify-self: center;
+        float: right;
+        h2{
+            font-size: 30px;
+            color: $secondaryBackgroundColor;
+        } 
+    } 
+  }
+  

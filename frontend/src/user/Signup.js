@@ -51,7 +51,9 @@ const Signup = () => {
     if (success) {
       return (
         <div>
-          {toast.success("New account was created successfully")}
+          {toast.success("New account was created successfully", {
+            autoClose: 1000,
+          })}
           <Redirect to="/signin"></Redirect>
         </div>
       );
@@ -60,7 +62,7 @@ const Signup = () => {
 
   const errorMessage = () => {
     if (error) {
-      return toast.error(error);
+      return toast.error(error, { autoClose: 2000 });
     }
   };
 
@@ -118,7 +120,7 @@ const Signup = () => {
   return (
     <div>
       <Menu />
-      <ToastContainer />
+      <ToastContainer autoClose={2000} />
       {successMessage()}
       {errorMessage()}
       {signupForm()}

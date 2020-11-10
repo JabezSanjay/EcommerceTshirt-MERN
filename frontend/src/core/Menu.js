@@ -61,6 +61,11 @@ const Menu = ({ history }) => {
                 </Link>
               </li>
             )}
+            <li>
+              <Link to="/cart" onClick={navbarClicked}>
+                Cart
+              </Link>
+            </li>
           </ul>
           <div
             className={navbar ? "hamburger-menu bar-change" : "hamburger-menu"}

@@ -9,12 +9,15 @@ const Card = ({
   product,
   addtoCart = false,
   removeFromCart = false,
+  showImage = true,
   setReload = (f) => f,
   reload = undefined,
 }) => {
   const addToCart = () => {
     addItemtoCart(product);
-    toast.success(`${product.name} has been added to the cart`);
+    toast.success(`${product.name} has been added to the cart`, {
+      autoClose: 2000,
+    });
   };
 
   const showAddToCart = () => {
@@ -45,14 +48,20 @@ const Card = ({
     );
   };
 
+  const showImageInCard = () => {
+    return (
+      showImage && <ImageHelper product={product} className="card-img-top" />
+    );
+  };
+
   const cartName = product.name;
   const cartDescription = product.description;
   const cartPrice = product.price;
   return (
     <div className="col-lg-4 mb-4">
-      <ToastContainer />
+      <ToastContainer autoClose={2000} />
       <div className="card">
-        <ImageHelper product={product} className="card-img-top" />
+        {showImageInCard(showImage)}
         <div className="card-body text-center">
           <h5 className="card-title">{cartName}</h5>
           <p className="card-text">{cartDescription}</p>
