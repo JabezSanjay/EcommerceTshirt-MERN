@@ -79,7 +79,7 @@ const StripeCheckout = ({
 
   return (
     <div className="text-center">
-      <h2>Stripe Checkout Rs.{loadTotalPrice()}</h2>
+      <h2>Payment Checkout Rs.{loadTotalPrice()}</h2>
       {loadPaymentButton()}
       <h5 className="m-5">Do not use your original card number. Instead use</h5>
       <h6>Account Number : 4242 4242 4242 </h6>
