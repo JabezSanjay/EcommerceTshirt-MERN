@@ -58,6 +58,7 @@ const AdminDashboard = () => {
   );
   return (
     <Base title={`${name}'s Dashboard`} className="container">
+      <h1 className="text-danger">Helloooo</h1>
       <div className="row">
         <div className="col-12 hidden-xs hidden-sm">{adminRightSide()}</div>
         <div className="col-sm-12">{adminLeftSide()}</div>

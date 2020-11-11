@@ -68,7 +68,9 @@ const StripeCheckout = ({
         amount={loadTotalPrice() * 100}
         currency="INR"
       >
-        <button className="btn btn-outline-success">Pay with Stripe</button>
+        <button className="btn btn-outline-success">
+          Pay Rs.{loadTotalPrice() * 100}
+        </button>
       </StripeCheckoutPopup>
     ) : (
       <Link to="signin">
