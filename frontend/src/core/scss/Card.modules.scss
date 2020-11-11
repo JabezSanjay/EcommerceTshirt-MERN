@@ -3,9 +3,10 @@
     border: 2px solid $primaryBackgroundColor;
     .card-title{
         font-weight: 800;
+        font-size: 17.5px;
         color: $secondaryBackgroundColor;
     }
     .card-text{
-        font-weight: 500;
+        font-family: "Poppins", sans-serif;
     }
 }
