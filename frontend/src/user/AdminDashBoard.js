@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { isAutheticated } from "../auth/helper";
-import Base from "../core/Base";
 
 const AdminDashboard = () => {
   const {
@@ -57,13 +56,10 @@ const AdminDashboard = () => {
     </div>
   );
   return (
-    <Base title={`${name}'s Dashboard`} className="container">
-      <h1 className="text-danger">Helloooo</h1>
-      <div className="row">
-        <div className="col-12 hidden-xs hidden-sm">{adminRightSide()}</div>
-        <div className="col-sm-12">{adminLeftSide()}</div>
-      </div>
-    </Base>
+    <div className="row">
+      <div className="col-12 hidden-xs hidden-sm">{adminRightSide()}</div>
+      <div className="col-sm-12">{adminLeftSide()}</div>
+    </div>
   );
 };
 

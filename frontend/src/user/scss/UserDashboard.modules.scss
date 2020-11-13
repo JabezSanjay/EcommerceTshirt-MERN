@@ -1,0 +1,20 @@
+@import "../../scss/variables";
+
+.userDashboard{
+    background: url("../../images/background.svg");
+    min-height: 100vh;
+    img{
+        margin: 100px 0 30px 0;
+        width: 40vh;
+    }
+    h1{
+        color: $secondaryBackgroundColor;
+        font-size: 35px;
+    }
+    &__card{
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
