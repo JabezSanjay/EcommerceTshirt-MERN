@@ -8,8 +8,15 @@ import "./scss/Cart.modules.scss";
 import cartIllustration from "../images/cart.svg";
 import emptyCartIllustration from "../images/emptyCart.svg";
 import paymentIllustration from "../images/payment.svg";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination } from "swiper";
+// Import Swiper styles
+import "swiper/swiper.scss";
+import "swiper/components/pagination/pagination.scss";
 
 const Cart = () => {
+  SwiperCore.use(Pagination);
   const [products, setProducts] = useState([]);
   const [reload, setReload] = useState(false);
 
@@ -17,37 +24,32 @@ const Cart = () => {
     setProducts(loadCartItems());
   }, [reload]);
 
-  const loadProducts = () => {
-    if (window.localStorage.cart.length !== 2) {
-      return (
-        <div>
-          {products.map((product, index) => {
-            return (
-              <div key={index}>
-                <Card
-                  product={product}
-                  removeFromCart={true}
-                  addtoCart={false}
-                  setReload={setReload}
-                  reload={reload}
-                  showImage={false}
-                />
-              </div>
-            );
-          })}
-        </div>
-      );
-    } else {
-      return (
+  let itemsToRender;
+  window.localStorage.cart.length !== 2
+    ? (itemsToRender = products.map((item) => {
+        return (
+          <SwiperSlide>
+            <div className="cartpage__products">
+              <Card
+                product={item}
+                removeFromCart={true}
+                addtoCart={false}
+                setReload={setReload}
+                reload={reload}
+                showImage={true}
+              />
+            </div>
+          </SwiperSlide>
+        );
+      }))
+    : (itemsToRender = (
         <div className="m-5">
-          <h3 className="text-white ">No Items in Cart</h3>
-          <Link to="/" className="btn btn-success btn-sm">
+          <h3 className="text-white">No Items in Cart</h3>
+          <Link to="/" className="btn btn-success btn-sm p-2 m-3">
             Back To Shopping
           </Link>
         </div>
-      );
-    }
-  };
+      ));
 
   return (
     <div>
@@ -60,6 +62,7 @@ const Cart = () => {
         }
       >
         <img
+          className="cartpage__image"
           src={
             window.localStorage.cart.length !== 2
               ? cartIllustration
@@ -67,9 +70,14 @@ const Cart = () => {
           }
           alt=""
         />
-        <div className="container">
-          <div className="cartpage__products">{loadProducts()}</div>
-        </div>
+
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+        >
+          {itemsToRender}
+        </Swiper>
       </div>
       {window.localStorage.cart.length !== 2 ? (
         <div className="checkout text-center">

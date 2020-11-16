@@ -7,11 +7,11 @@
     align-items: center;
     justify-content: space-evenly;
     &__products{
-        width: 100%;
+        
         margin-left: 20rem;
         margin-top: 7rem;    
     }
-    img{
+    &__image{
         width: 50vh;
         margin: 7rem 1rem 5rem 20rem;
     }  
