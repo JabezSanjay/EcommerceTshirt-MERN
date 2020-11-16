@@ -58,7 +58,6 @@ const Card = ({
   const cartName = product.name;
   const cartDescription = product.description;
   const cartPrice = product.price;
-  const cartAmount = product.amount;
   return (
     <div className="col-lg-4 mb-4">
       <ToastContainer autoClose={2000} position="bottom-right" />
@@ -67,7 +66,7 @@ const Card = ({
         <div className="card-body text-center">
           <h5 className="card-title">{cartName}</h5>
           <p className="card-text">{cartDescription}</p>
-          <p className="card-text">Rs.{cartPrice || cartAmount}</p>
+          <p className="card-text">Rs.{cartPrice}</p>
           {showRemoveFromCart(removeFromCart)}
           {showAddToCart(addtoCart)}
         </div>

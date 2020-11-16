@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const db = process.env.MONGODB_URL;
+const localDb = process.env.DATABASE;
 //My routes
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
@@ -22,7 +23,7 @@ app.use(cors());
 
 //DB Connection
 mongoose
-  .connect(db, {
+  .connect(localDb, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
