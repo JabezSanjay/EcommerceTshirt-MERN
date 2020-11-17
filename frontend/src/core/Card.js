@@ -57,7 +57,7 @@ const Card = ({
 
   const cartName = product.name;
   const cartDescription = product.description;
-  const cartPrice = product.price;
+  const cartPrice = product.price || product.amount;
   return (
     <div className="col-lg-4 mb-4">
       <ToastContainer autoClose={2000} position="bottom-right" />
