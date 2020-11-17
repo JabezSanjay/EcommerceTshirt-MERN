@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const db = process.env.MONGODB_URL;
+const productionDb = process.env.MONGODB_URL;
 const localDb = process.env.DATABASE;
 //My routes
 const authRoutes = require("./routes/auth");
@@ -23,7 +23,7 @@ app.use(cors());
 
 //DB Connection
 mongoose
-  .connect(localDb, {
+  .connect(productionDb, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
