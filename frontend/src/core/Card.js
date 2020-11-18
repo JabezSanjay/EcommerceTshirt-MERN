@@ -62,7 +62,7 @@ const Card = ({
     <div className="col-lg-4 mb-4">
       <ToastContainer autoClose={2000} position="bottom-right" />
       <div className="card">
-        {showImageInCard(showImage)}
+        <div className="card__image">{showImageInCard(showImage)}</div>
         <div className="card-body text-center">
           <h5 className="card-title">{cartName}</h5>
           <p className="card-text">{cartDescription}</p>

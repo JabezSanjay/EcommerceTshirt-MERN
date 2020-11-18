@@ -36,9 +36,9 @@ const UserDashBoard = () => {
 
   let itemsToRender;
   products
-    ? (itemsToRender = products.purchases.map((item) => {
+    ? (itemsToRender = products.purchases.map((item, index) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <div className="userDashboard__card">
               <Card
                 product={item}

@@ -18,3 +18,13 @@
     justify-content: center;
     }
 }
+
+@media (max-width: 1024px) {
+    .userDashboard{
+        &__card{
+            .card{
+                margin: 0px;      
+            }
+        }
+    }
+}
