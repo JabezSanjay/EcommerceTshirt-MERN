@@ -23,7 +23,7 @@ app.use(cors());
 
 //DB Connection
 mongoose
-  .connect(productionDb, {
+  .connect(localDb, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -50,7 +50,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //PORT
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8001;
 
 //Starting a server
 app.listen(port, () => {
