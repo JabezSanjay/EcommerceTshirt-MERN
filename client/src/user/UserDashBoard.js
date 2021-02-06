@@ -3,15 +3,16 @@ import { isAutheticated } from "../auth/helper";
 import { getAllUserOrders } from "./helper/userapicalls";
 import Menu from "../core/Menu";
 import Card from "../core/Card";
-import "./scss/UserDashboard.modules.scss";
 import dashboardIllustration from "../images/dashboard.svg";
-
+import styled from "styled-components";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from "swiper";
 // Import Swiper styles
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
+import COLORS from "../assets/colors";
+import background from "../images/background.svg";
 
 const UserDashBoard = () => {
   // install Swiper components
@@ -60,7 +61,7 @@ const UserDashBoard = () => {
   }, []);
 
   return (
-    <div>
+    <UserDashboardTag>
       <Menu />
       <div className="userDashboard">
         <div className="text-center">
@@ -75,8 +76,39 @@ const UserDashBoard = () => {
           {itemsToRender}
         </Swiper>
       </div>
-    </div>
+    </UserDashboardTag>
   );
 };
 
 export default UserDashBoard;
+
+const UserDashboardTag = styled.div`
+  .userDashboard {
+    background: url(${background});
+    min-height: 100vh;
+    img {
+      margin: 100px 0 30px 0;
+      width: 40vh;
+    }
+    h1 {
+      color: ${COLORS.secondaryBackgroundColor};
+      font-size: 35px;
+    }
+    &__card {
+      margin: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .userDashboard {
+      &__card {
+        .card {
+          margin: 0px;
+        }
+      }
+    }
+  }
+`;

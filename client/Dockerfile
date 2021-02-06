@@ -7,7 +7,7 @@ COPY ./yarn.lock ./
 
 RUN npm install
 
-COPY . .
+COPY ./ ./
 
 EXPOSE 3000
 

@@ -3,11 +3,12 @@ import Menu from "../core/Menu";
 import SignupImage from "../images/signup.svg";
 import { signup } from "../auth/helper";
 import { Link } from "react-router-dom";
-import "./scss/Sign.modules.scss";
-import "./scss/Message.modules.scss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Redirect } from "react-router-dom";
+import styled from "styled-components";
+import "../scss/_variables.scss";
+import COLORS from "../assets/colors";
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -118,14 +119,124 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <SignupTag>
       <Menu />
       <ToastContainer autoClose={2000} />
       {successMessage()}
       {errorMessage()}
       {signupForm()}
-    </div>
+    </SignupTag>
   );
 };
 
 export default Signup;
+
+const SignupTag = styled.div`
+  .align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 100vh;
+    background: radial-gradient(
+      ${COLORS.primaryBackgroundColor},
+      ${COLORS.secondaryBackgroundColor}
+    );
+
+    &__item {
+      &--start {
+        align-self: flex-start;
+      }
+
+      &--end {
+        align-self: flex-end;
+      }
+    }
+  }
+  .site {
+    &__logo {
+      margin-bottom: 2rem;
+    }
+  }
+  input {
+    border: 0;
+    font-family: "Poppins", sans-serif;
+
+    &::placeholder {
+      color: ${COLORS.black};
+    }
+  }
+  .form {
+    &__field {
+      margin-bottom: 1rem;
+    }
+    input {
+      outline: 0;
+      padding: 0.5rem 1rem;
+      &[type="email"],
+      &[type="text"],
+      &[type="password"] {
+        width: 100%;
+      }
+    }
+  }
+
+  .grid {
+    max-width: 25rem;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+    font-weight: 100;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+  }
+
+  a {
+    color: ${COLORS.secondaryBackgroundColor};
+  }
+
+  .register {
+    background-color: #ffffff;
+    background-image: linear-gradient(
+      315deg,
+      #ffffff 80%,
+      ${COLORS.secondaryBackgroundColor} 20%
+    );
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-top: 2rem;
+    img {
+      width: 90%;
+    }
+    input {
+      border: 1px solid ${COLORS.secondaryBackgroundColor};
+      border-radius: 999px;
+      background-color: transparent;
+      text-align: center;
+
+      &[type="email"],
+      &[type="text"],
+      &[type="password"] {
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
+        background-position: 1rem 50%;
+      }
+      &[type="submit"] {
+        background-image: linear-gradient(
+          160deg,
+          ${COLORS.primaryBackgroundColor} 0%,
+          ${COLORS.secondaryBackgroundColor} 100%
+        );
+        color: #fff;
+        margin-bottom: 2rem;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+`;
