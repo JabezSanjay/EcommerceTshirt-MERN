@@ -1,7 +1,6 @@
 
-FROM node:14-slim
+FROM node:12.20.1-stretch
 
-WORKDIR /usr/src/app
 
 COPY ./package.json ./
 COPY ./yarn.lock ./
