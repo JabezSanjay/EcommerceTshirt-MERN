@@ -1,5 +1,5 @@
 
-FROM node:12.20.1-stretch
+FROM node:12-alpine
 
 
 COPY ./package.json ./
