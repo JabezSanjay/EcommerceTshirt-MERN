@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Menu from "./Menu";
 import Card from "./Card";
-import illustration from "../images/main-page-illustration.png";
+import illustration from "../assets/images/main-page-illustration.png";
 import ScrollToTop from "react-scroll-up";
 import { getProducts } from "./helper/coreapicalls";
 import styled from "styled-components";
 import COLORS from "../assets/colors";
-import background from "../images/background.svg";
+import background from "../assets/images/background.svg";
 
 const Home = () => {
   const [products, setProducts] = useState([]);

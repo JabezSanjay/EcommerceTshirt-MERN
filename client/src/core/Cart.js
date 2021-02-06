@@ -4,12 +4,12 @@ import Card from "./Card";
 import { Link } from "react-router-dom";
 import StripeCheckout from "./StripeCheckout";
 import { loadCartItems } from "./helper/cartHelper";
-import cartIllustration from "../images/cart.svg";
-import emptyCartIllustration from "../images/emptyCart.svg";
-import paymentIllustration from "../images/payment.svg";
+import cartIllustration from "../assets/images/cart.svg";
+import emptyCartIllustration from "../assets/images/emptyCart.svg";
+import paymentIllustration from "../assets/images/payment.svg";
 import styled from "styled-components";
 import COLORS from "../assets/colors";
-import background from "../images/background.svg";
+import background from "../assets/images/background.svg";
 
 const Cart = () => {
   const [products, setProducts] = useState([]);

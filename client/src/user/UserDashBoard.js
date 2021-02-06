@@ -3,7 +3,7 @@ import { isAutheticated } from "../auth/helper";
 import { getAllUserOrders } from "./helper/userapicalls";
 import Menu from "../core/Menu";
 import Card from "../core/Card";
-import dashboardIllustration from "../images/dashboard.svg";
+import dashboardIllustration from "../assets/images/dashboard.svg";
 import styled from "styled-components";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,7 +12,7 @@ import SwiperCore, { Pagination } from "swiper";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import COLORS from "../assets/colors";
-import background from "../images/background.svg";
+import background from "../assets/images/background.svg";
 
 const UserDashBoard = () => {
   // install Swiper components

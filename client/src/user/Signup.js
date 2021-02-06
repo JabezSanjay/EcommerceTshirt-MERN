@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Menu from "../core/Menu";
-import SignupImage from "../images/signup.svg";
+import SignupImage from "../assets/images/signup.svg";
 import { signup } from "../auth/helper";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Redirect } from "react-router-dom";
 import styled from "styled-components";
-import "../scss/_variables.scss";
+import "../assets/scss/_variables.scss";
 import COLORS from "../assets/colors";
 
 const Signup = () => {

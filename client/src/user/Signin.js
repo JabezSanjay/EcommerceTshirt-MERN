@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Menu from "../core/Menu";
 import { Link, Redirect } from "react-router-dom";
-import SigninImage from "../images/signin.svg";
+import SigninImage from "../assets/images/signin.svg";
 import styled from "styled-components";
 import { isAutheticated, signin, authenticate } from "../auth/helper";
 import { ToastContainer, toast } from "react-toastify";
