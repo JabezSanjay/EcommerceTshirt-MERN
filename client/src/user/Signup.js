@@ -7,7 +7,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Redirect } from "react-router-dom";
 import styled from "styled-components";
-import "../assets/scss/_variables.scss";
 import COLORS from "../assets/colors";
 
 const Signup = () => {
