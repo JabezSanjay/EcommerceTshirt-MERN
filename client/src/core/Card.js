@@ -25,13 +25,16 @@ const Card = ({
   const showAddToCart = () => {
     return (
       addtoCart && (
-        // eslint-disable-next-line
-        <a onClick={addToCart} className="btn btn-outline-success btn-sm">
-          Add to Cart
-        </a>
+        <div>
+          {/* eslint-disable-next-line*/}
+          <a onClick={addToCart} className="btn btn-outline-success btn-sm">
+            Add to Cart
+          </a>
+        </div>
       )
     );
   };
+
 
   const showRemoveFromCart = () => {
     return (
@@ -96,7 +99,6 @@ const CardTag = styled.div`
       font-family: "Poppins", sans-serif;
     }
   }
-
   @media (max-width: 1024px) {
     .card {
       margin: 30px;
