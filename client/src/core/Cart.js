@@ -20,7 +20,10 @@ const Cart = () => {
   }, [reload]);
 
   const loadProducts = () => {
-    if (window.localStorage.cart.length !== 2) {
+    if (
+      window.localStorage.cart !== undefined &&
+      window.localStorage.cart.length !== 2
+    ) {
       return (
         <div>
           {products.map((product, index) => {
@@ -56,6 +59,7 @@ const Cart = () => {
       <Menu />
       <div
         className={
+          window.localStorage.cart !== undefined &&
           window.localStorage.cart.length !== 2
             ? "cartpage"
             : "cartpage-alternative"
@@ -63,6 +67,7 @@ const Cart = () => {
       >
         <img
           src={
+            window.localStorage.cart !== undefined &&
             window.localStorage.cart.length !== 2
               ? cartIllustration
               : emptyCartIllustration
@@ -73,7 +78,8 @@ const Cart = () => {
           <div className="cartpage__products">{loadProducts()}</div>
         </div>
       </div>
-      {window.localStorage.cart.length !== 2 ? (
+      {window.localStorage.cart !== undefined &&
+      window.localStorage.cart.length !== 2 ? (
         <div className="checkout text-center">
           <StripeCheckout products={products} setReload={setReload} />
           <img src={paymentIllustration} alt="" />
