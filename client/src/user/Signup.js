@@ -59,7 +59,6 @@ const Signup = () => {
       );
     }
   };
-
   const errorMessage = () => {
     if (error) {
       return toast.error(error, { autoClose: 2000 });
