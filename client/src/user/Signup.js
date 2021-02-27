@@ -46,6 +46,7 @@ const Signup = () => {
       })
       .catch();
   };
+
   const successMessage = () => {
     if (success) {
       return (
