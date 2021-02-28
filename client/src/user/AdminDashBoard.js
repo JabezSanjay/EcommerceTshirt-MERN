@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   } = isAutheticated();
 
   const adminLeftSide = () => (
-    <div className="card  text-center">
+    <div className="card text-center">
       <h4 className="card-header bg-dark text-white">Admin Navigation</h4>
       <ul className="list-group">
         <li className="list-group-item">

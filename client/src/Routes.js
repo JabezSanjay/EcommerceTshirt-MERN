@@ -8,13 +8,13 @@ import UserDashboard from "./user/UserDashBoard";
 import AdminDashboard from "./user/AdminDashBoard";
 import PrivateRoute from "./auth/helper/PrivateRoutes";
 import AdminRoute from "./auth/helper/AdminRoutes";
-import AddCategory from "./admin/AddCategory";
 import AddProduct from "./admin/AddProduct";
 import ManageProducts from "./admin/ManageProducts";
 import Orders from "./admin/Orders";
 import ManageCategories from "./admin/ManageCategories";
 import UpdateProduct from "./admin/UpdateProduct";
 import UpdateCategory from "./admin/UpdateCategory";
+import AddCategory from "./admin/AddCategory";
 
 const Routes = () => {
   return (
