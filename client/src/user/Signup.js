@@ -180,11 +180,6 @@ const SignupTag = styled.div`
     }
   }
 
-  .grid {
-    max-width: 25rem;
-    width: 90%;
-  }
-
   h2 {
     font-size: 2.75rem;
     font-weight: 100;
