@@ -173,5 +173,22 @@ const CartTag = styled.div`
         margin: 5rem 0 0 0;
       }
     }
+    .checkout {
+      margin-top: 50px;
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      float: right;
+      flex-direction: column;
+      h2 {
+        font-size: 28px;
+        color: ${COLORS.secondaryBackgroundColor};
+        float: left;
+      }
+      img {
+        width: 40vh;
+      }
+    }
   }
 `;
