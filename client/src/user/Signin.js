@@ -140,7 +140,6 @@ const SigninTag = styled.div`
       &--start {
         align-self: flex-start;
       }
-
       &--end {
         align-self: flex-end;
       }
