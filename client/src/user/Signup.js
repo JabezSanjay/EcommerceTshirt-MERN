@@ -179,7 +179,6 @@ const SignupTag = styled.div`
       }
     }
   }
-
   .grid {
     max-width: 25rem;
     width: 90%;
