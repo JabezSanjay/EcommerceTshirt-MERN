@@ -3,8 +3,6 @@ const stripe = require("stripe")(`${stripeKey}`);
 
 const uuid = require("uuid/v4");
 exports.makepayment = (req, res) => {
-  const { products, token } = req.body;
-
   let amount = 0;
   products.map((p) => {
     amount = amount + p.price;
